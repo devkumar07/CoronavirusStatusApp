@@ -52,17 +52,9 @@ $(document).ready(function(){
             var data = JSON.parse(response);
             createNewsGrid(data);
         });
-        $("#btn2").click(function(){
-            $.get("/globalcases",{},function(response){
-                alert("button clicked1");
-                var data = JSON.parse(response);
-                createCaseGrid(data);
-            });
-        });
     });
     $("#btn2").click(function(){
         $.get("/globalcases",{},function(response){
-            alert("button clicked");
             var data = JSON.parse(response);
             createCaseGrid(data);
         });
