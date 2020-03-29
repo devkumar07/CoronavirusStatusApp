@@ -12,7 +12,6 @@ def index():
 def init():
     output = json.dumps(get_data())
     return output
-"""
+
 if __name__ == '__main__':
     app.run()
-"""
