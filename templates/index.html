@@ -4,26 +4,27 @@
             <link rel="stylesheet" href="/static/bootstrap/bootstrap.min.css">
             <script src="/static/jquery/jquery.js"></script>
             <script src="/static/bootstrap/bootstrap.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
             <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
             <script src="/static/main.js"></script>
             <style>
-                #main-table {
+                #cases {
                       font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
                       border-collapse: collapse;
                       width: 100%;
                     }
                     
-                    #main-table td, #customers th {
+                    #cases td, #customers th {
                       border: 1px solid #ddd;
                       padding: 8px;
                     }
                     
-                    #main-table tr:nth-child(even){background-color: #f2f2f2;}
+                    #cases tr:nth-child(even){background-color: #f2f2f2;}
                     
-                    #main-table tr:hover {background-color: #ddd;}
+                    #cases tr:hover {background-color: #ddd;}
                     
-                    #main-table th {
-                      padding-top: 12px;
+                    #cases th {
+                      padding-top: 25px;
                       padding-bottom: 12px;
                       text-align: left;
                       background-color: #4CAF50;
@@ -32,7 +33,7 @@
                     div.container {
                       margin-top: 10%;
                     }
-                    #main-table{
+                    #cases{
                       margin-top: 3%;
                     }
                     button{
@@ -43,6 +44,28 @@
                     .button-group{
                         margin-top: 3%;
                         margin-bottom: 3%;
+                    }
+                    #news {
+                      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                      border-collapse: collapse;
+                      width: 100%;
+                    }
+                    
+                    #news td, #customers th {
+                      border: 1px solid #ddd;
+                      padding: 8px;
+                    }
+                    
+                    #news tr:nth-child(even){background-color: #f2f2f2;}
+                    
+                    #news tr:hover {background-color: #ddd;}
+                    
+                    #news th {
+                      padding-top: 25px;
+                      padding-bottom: 12px;
+                      text-align: left;
+                      background-color: #4CAF50;
+                      color: white;
                     }
 
             </style>
@@ -59,12 +82,26 @@
         <div class="container">
 
                 <h1 id="title">Coronavirus Cases in Global Scale</h1>
-                <div class="button-group">
-                  <button id ="btn1"> Latest COVID-19 News</button>
-                  <button id ="btn2"> COVID-19 Global Cases</button>
-                </div>
-                <table id="main-table">
+                <h2>Cases</h1>
+                <table id="cases">
+                  <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>Confirmed Cases</th>
+                        <th>Deaths</th>
+                    </tr>
+                </thead>
                 </table>
+                <h2 id="title">Latest COVID-19 News</h1>
+                  <table id="news">
+                    <thead>
+                      <tr>
+                          <th>Title</th>
+                          <th>Description</th>
+                          <th>Source</th>
+                      </tr>
+                  </thead>
+                  </table>
         </div>
     </main>
 </body>

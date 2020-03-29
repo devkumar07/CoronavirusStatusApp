@@ -9,9 +9,11 @@ cases_json = response_cases.json()
 news_json = response_news.json()
 
 def get_data():
-    ans1 = cases_json['locations']
-    res = sorted(ans1, key = lambda i: i['latest']['confirmed'],reverse=True) 
-    return res
+    #ans1 = cases_json['locations']
+    #res = sorted(cases_json['locations'], key = lambda i: i['latest']['confirmed'],reverse=True) 
+    #print(cases_json)
+    return cases_json
 
 def get_news():
-    return news_json['articles']
+    #print(news_json)
+    return news_json

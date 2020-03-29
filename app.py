@@ -10,17 +10,17 @@ def index():
 
 @app.route('/init')
 def init():
-    output = json.dumps(get_data())
+    output = jsonify(get_data())
     return output
 
 @app.route('/globalcases')
 def GlobalCases():
-    output = json.dumps(get_data())
-    return output
+    #output = json.dumps(get_data())
+    return jsonify(get_data())
 
 @app.route('/news')
 def news():
-    output = json.dumps(get_news())
+    output = jsonify(get_news())
     return output
 
 
