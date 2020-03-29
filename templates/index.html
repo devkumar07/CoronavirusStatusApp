@@ -8,6 +8,11 @@
             <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
             <script src="/static/main.js"></script>
             <style>
+                #title{
+                      padding-top: 25px;
+                      padding-bottom: 12px;
+                      text-align: left;              
+                }
                 #cases {
                       font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
                       border-collapse: collapse;
@@ -34,7 +39,7 @@
                       margin-top: 10%;
                     }
                     #cases{
-                      margin-top: 3%;
+                      margin-top: 10%;
                     }
                     button{
                       margin-top: 2%;
@@ -49,6 +54,7 @@
                       font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
                       border-collapse: collapse;
                       width: 100%;
+                      margin-top: 10%;
                     }
                     
                     #news td, #customers th {
@@ -67,6 +73,19 @@
                       background-color: #4CAF50;
                       color: white;
                     }
+                    .card {
+                      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                      transition: 0.3s;
+                      border-radius: 5px;
+                      text-align: center;
+                      width: 400px;
+                      margin-left: auto;
+                      margin-right: auto;
+                    }
+
+                    .card:hover {
+                      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                    }
 
             </style>
     </head>
@@ -82,13 +101,23 @@
         <div class="container">
 
                 <h1 id="title">Coronavirus Cases in Global Scale</h1>
-                <h2>Cases</h1>
+
+                <div class="card">
+                  <div class="container">
+                    <h4 id="totalcases"></h4> 
+                  </div>
+                  <div class="container">
+                    <h4 id="totaldeaths"></h4> 
+                  </div>
+                </div>
+                <h2 id="title">Cases</h1>
                 <table id="cases">
                   <thead>
                     <tr>
                         <th>Country</th>
                         <th>Confirmed Cases</th>
                         <th>Deaths</th>
+                        <th>Last Updated</th>
                     </tr>
                 </thead>
                 </table>

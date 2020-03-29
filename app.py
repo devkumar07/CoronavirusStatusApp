@@ -10,7 +10,7 @@ def index():
 
 @app.route('/init')
 def init():
-    output = jsonify(get_data())
+    output = json.dumps(get_data())
     return output
 
 @app.route('/globalcases')

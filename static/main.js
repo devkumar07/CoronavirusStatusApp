@@ -1,3 +1,9 @@
+function createCards(data){
+  $("#totalcases").html('<b>Total Cases: </b>'+ data.latest.confirmed);
+  $("#totaldeaths").html('<b>Total Death: </b>'+ data.latest.deaths);
+}
+
+
 $(document).ready(function(){
     $.get("/",'index.html')
     $(document).ready(function () {
@@ -11,7 +17,8 @@ $(document).ready(function(){
           "columns": [
             {'data': 'country'},
             {'data': 'latest.confirmed'},
-            {'data': 'latest.deaths'}
+            {'data': 'latest.deaths'},
+            {'data': 'last_updated'}
           ],
           "order": [[ 1, "desc" ]]
         });
@@ -29,4 +36,8 @@ $(document).ready(function(){
             {'data': 'source.name'}
         ]
       });
+      $.get("/init",{},function(response){
+        var data = JSON.parse(response);
+        createCards(data);
+    });
 });
